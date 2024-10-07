@@ -1,5 +1,5 @@
 {
-  description = "Dreams of Code Zenful macOS";
+  description = "Zenful Darwin Nix Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -68,7 +68,6 @@
 
       system.defaults = {
         dock.autohide  = true;
-        dock.largesize = 64;
         dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
           "/Applications/Firefox.app"
@@ -119,6 +118,8 @@
             enableRosetta = true;
             # User owning the Homebrew prefix
             user = "elliott";
+
+            autoMigrate = true;
           };
         }
       ];
